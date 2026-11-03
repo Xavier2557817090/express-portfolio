@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340">
+  <!-- Project 1 placeholder: Campus Eats food ordering app -->
+  <defs>
+    <linearGradient id="p1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d6efd"/>
+      <stop offset="100%" stop-color="#6610f2"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#p1)"/>
+  <circle cx="520" cy="60" r="90" fill="#ffffff" opacity="0.08"/>
+  <circle cx="80" cy="300" r="70" fill="#ffffff" opacity="0.08"/>
+  <text x="300" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="bold"
+        fill="#ffffff" text-anchor="middle">Campus Eats</text>
+  <text x="300" y="195" font-family="Segoe UI, Arial, sans-serif" font-size="18"
+        fill="#ffffff" opacity="0.85" text-anchor="middle">Online Food Ordering Web App</text>
+  <text x="300" y="245" font-family="Segoe UI, Arial, sans-serif" font-size="14"
+        fill="#ffc107" text-anchor="middle">Project screenshot placeholder</text>
+</svg>

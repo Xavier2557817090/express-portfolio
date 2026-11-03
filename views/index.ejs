@@ -1,0 +1,114 @@
+<%-
+/* ============================================================
+   File Name   : index.ejs (Home page view)
+   Student's Name : 徐斌航
+   StudentID   : 2024110514
+   Date        : 2026-11-03
+   Description : Home page of the portfolio. Shows a welcome
+                 message, a mission statement and buttons that
+                 redirect the user to the About Me / Projects
+                 pages. Also shows a success banner after the
+                 contact form has been submitted.
+   ============================================================ */
+%>
+
+<!-- Include the shared header (head + navigation bar) -->
+<%- include('partials/header') %>
+
+<!-- ---------- Main content ---------- -->
+<main class="flex-grow-1">
+
+  <!-- Success banner shown after the contact form is submitted -->
+  <% if (messageSent) { %>
+    <div class="container mt-4">
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i>
+        Thank you! Your message has been sent successfully.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+  <% } %>
+
+  <!-- Hero / welcome section -->
+  <section class="hero-section text-white text-center">
+    <div class="container py-5">
+      <div class="row align-items-center g-5 py-5">
+
+        <!-- Welcome text and mission statement -->
+        <div class="col-lg-8 mx-auto">
+          <p class="lead text-uppercase fw-semibold letter-spacing">Welcome to my portfolio</p>
+          <h1 class="display-4 fw-bold mb-3">Hi, I'm <span class="accent-text">徐斌航</span></h1>
+          <p class="lead mb-4">
+            A passionate web development student focused on building clean, useful and
+            user-friendly websites and web applications.
+          </p>
+
+          <!-- Mission statement -->
+          <div class="mission-statement mx-auto mb-4">
+            <i class="bi bi-stars me-2"></i>
+            <em>My mission is to craft reliable, accessible and elegant web experiences
+              that solve real problems for real people.</em>
+          </div>
+
+          <!-- Buttons that redirect to other pages of the site -->
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="/about" class="btn btn-warning btn-lg px-4">
+              <i class="bi bi-person-fill me-2"></i>About Me
+            </a>
+            <a href="/projects" class="btn btn-outline-light btn-lg px-4">
+              <i class="bi bi-kanban-fill me-2"></i>View My Projects
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick highlights: short links to the other pages -->
+  <section class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Explore My Site</h2>
+    <div class="row g-4">
+
+      <!-- About Me teaser -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm highlight-card">
+          <div class="card-body p-4">
+            <i class="bi bi-person-fill highlight-icon"></i>
+            <h3 class="h5 fw-bold">About Me</h3>
+            <p class="text-muted">Learn who I am, what I study, and download my resume.</p>
+            <a href="/about" class="stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services teaser -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm highlight-card">
+          <div class="card-body p-4">
+            <i class="bi bi-tools highlight-icon"></i>
+            <h3 class="h5 fw-bold">Services</h3>
+            <p class="text-muted">Discover the web development services I can offer you.</p>
+            <a href="/services" class="stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact teaser -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm highlight-card">
+          <div class="card-body p-4">
+            <i class="bi bi-envelope-fill highlight-icon"></i>
+            <h3 class="h5 fw-bold">Contact Me</h3>
+            <p class="text-muted">Have a question or a project in mind? Send me a message.</p>
+            <a href="/contact" class="stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- Include the shared footer (footer + scripts) -->
+<%- include('partials/footer') %>

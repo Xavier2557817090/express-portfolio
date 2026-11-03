@@ -1,0 +1,40 @@
+<%-
+/* ============================================================
+   File Name   : services.ejs (Services page view)
+   Student's Name : 徐斌航
+   StudentID   : 2024110514
+   Date        : 2026-11-03
+   Description : Services page. Renders one service-card partial
+                 for every service passed in from the route, with
+                 an icon, a title and a short description.
+   ============================================================ */
+%>
+
+<!-- Include the shared header (head + navigation bar) -->
+<%- include('partials/header') %>
+
+<!-- Shared page banner + opening of the content area -->
+<%- include('partials/content', { pageTitle: 'Services', pageSubtitle: 'What I can do for you' }) %>
+
+  <!-- ---------- Services grid: one card per service ---------- -->
+  <div class="row g-4">
+    <% services.forEach(function (service) { %>
+      <!-- Reusable service card partial -->
+      <%- include('partials/service-card', { service: service }) %>
+    <% }); %>
+  </div>
+
+  <!-- Call to action: invite the visitor to the contact page -->
+  <div class="text-center mt-5">
+    <p class="lead">Need one of these services? Send me a message and let's discuss it.</p>
+    <a href="/contact" class="btn btn-dark btn-lg px-4">
+      <i class="bi bi-envelope-fill me-2"></i>Request a Service
+    </a>
+  </div>
+
+<!-- Close the content area opened by the content partial -->
+</div>
+</main>
+
+<!-- Include the shared footer (footer + scripts) -->
+<%- include('partials/footer') %>

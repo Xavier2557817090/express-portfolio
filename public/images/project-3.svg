@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340">
+  <!-- Project 3 placeholder: WeatherScope dashboard -->
+  <defs>
+    <linearGradient id="p3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fd7e14"/>
+      <stop offset="100%" stop-color="#ffc107"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#p3)"/>
+  <circle cx="520" cy="60" r="90" fill="#ffffff" opacity="0.1"/>
+  <circle cx="80" cy="300" r="70" fill="#ffffff" opacity="0.1"/>
+  <text x="300" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="bold"
+        fill="#212529" text-anchor="middle">WeatherScope</text>
+  <text x="300" y="195" font-family="Segoe UI, Arial, sans-serif" font-size="18"
+        fill="#212529" opacity="0.8" text-anchor="middle">Weather Dashboard</text>
+  <text x="300" y="245" font-family="Segoe UI, Arial, sans-serif" font-size="14"
+        fill="#6c250e" text-anchor="middle">Project screenshot placeholder</text>
+</svg>

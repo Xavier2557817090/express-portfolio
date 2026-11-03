@@ -1,0 +1,40 @@
+<%-
+/* ============================================================
+   File Name   : project-card.ejs (partial)
+   Student's Name : 徐斌航
+   StudentID   : 2024110514
+   Date        : 2026-11-03
+   Description : Reusable Bootstrap card that displays one
+                 highlighted project (image, role, outcome and
+                 tech tags). Rendered once per project on the
+                 Projects page.
+   ============================================================ */
+%>
+
+<!-- ---------- Single project card ---------- -->
+<div class="col-md-6 col-lg-4 d-flex">
+  <div class="card project-card shadow-sm h-100 w-100">
+    <!-- Project image -->
+    <img src="<%= project.image %>" class="card-img-top" alt="Screenshot of <%= project.title %>">
+
+    <div class="card-body d-flex flex-column">
+      <!-- Project title -->
+      <h3 class="h5 card-title fw-bold"><%= project.title %></h3>
+
+      <!-- My role in the project -->
+      <p class="text-primary small fw-semibold mb-2">
+        <i class="bi bi-person-badge me-1"></i><%= project.role %>
+      </p>
+
+      <!-- Short description of role and outcome -->
+      <p class="card-text"><%= project.outcome %></p>
+
+      <!-- Technology tags -->
+      <div class="mt-auto">
+        <% project.tech.forEach(function (tag) { %>
+          <span class="badge tech-badge me-1 mb-1"><%= tag %></span>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+</div>

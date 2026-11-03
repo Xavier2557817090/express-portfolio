@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Custom portfolio logo: gradient hexagon with initials -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d6efd"/>
+      <stop offset="100%" stop-color="#4b84f0"/>
+    </linearGradient>
+  </defs>
+  <polygon points="50,3 93,27 93,73 50,97 7,73 7,27" fill="url(#logoGradient)"/>
+  <polygon points="50,10 86,30.5 86,69.5 50,90 14,69.5 14,30.5" fill="none" stroke="#ffc107" stroke-width="3"/>
+  <text x="50" y="63" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="bold"
+        fill="#ffffff" text-anchor="middle">XB</text>
+</svg>

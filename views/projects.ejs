@@ -1,0 +1,41 @@
+<%-
+/* ============================================================
+   File Name   : projects.ejs (Projects page view)
+   Student's Name : 徐斌航
+   StudentID   : 2024110514
+   Date        : 2026-11-03
+   Description : Projects page. Renders one project-card partial
+                 for every project passed in from the route,
+                 showing an image, the role and the outcome of
+                 each highlighted project.
+   ============================================================ */
+%>
+
+<!-- Include the shared header (head + navigation bar) -->
+<%- include('partials/header') %>
+
+<!-- Shared page banner + opening of the content area -->
+<%- include('partials/content', { pageTitle: 'Projects', pageSubtitle: 'A selection of work I am proud of' }) %>
+
+  <!-- ---------- Projects grid: one card per project ---------- -->
+  <div class="row g-4">
+    <% projects.forEach(function (project) { %>
+      <!-- Reusable project card partial -->
+      <%- include('partials/project-card', { project: project }) %>
+    <% }); %>
+  </div>
+
+  <!-- Call to action: invite the visitor to get in touch -->
+  <div class="text-center mt-5">
+    <p class="lead">Like what you see? I would love to hear about your project.</p>
+    <a href="/contact" class="btn btn-warning btn-lg px-4">
+      <i class="bi bi-chat-dots-fill me-2"></i>Let's Talk
+    </a>
+  </div>
+
+<!-- Close the content area opened by the content partial -->
+</div>
+</main>
+
+<!-- Include the shared footer (footer + scripts) -->
+<%- include('partials/footer') %>

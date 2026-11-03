@@ -1,0 +1,29 @@
+<%-
+/* ============================================================
+   File Name   : footer.ejs (partial)
+   Student's Name : 徐斌航
+   StudentID   : 2024110514
+   Date        : 2026-11-03
+   Description : Shared page footer. Closes the main content
+                 area and the HTML document, and loads the
+                 Bootstrap bundle + custom JavaScript.
+   ============================================================ */
+%>
+
+  <!-- ---------- Site footer ---------- -->
+  <footer class="bg-dark text-white-50 py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-1">
+        <img src="/images/logo.svg" alt="Logo" width="24" height="24" class="me-1">
+        &copy; <span id="current-year">2026</span> 徐斌航. All rights reserved.
+      </p>
+      <p class="mb-0 small">Built with ExpressJS, EJS and Bootstrap &middot; COMP229 Assignment 1</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle (needed for the mobile menu toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom site scripts -->
+  <script src="/javascripts/main.js"></script>
+</body>
+</html>

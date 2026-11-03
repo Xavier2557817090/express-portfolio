@@ -1,0 +1,27 @@
+<%-
+/* ============================================================
+   File Name   : content.ejs (partial)
+   Student's Name : 徐斌航
+   StudentID   : 2024110514
+   Date        : 2026-11-03
+   Description : Shared page-content wrapper. Opens the <main>
+                 area and renders the page banner (title +
+                 subtitle) that appears at the top of every
+                 inner page of the site.
+   ============================================================ */
+%>
+
+<!-- ---------- Main content area ---------- -->
+<main class="flex-grow-1">
+
+  <!-- Page banner: title + subtitle shared by all inner pages -->
+  <section class="page-banner text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold"><%= pageTitle %></h1>
+      <% if (typeof pageSubtitle !== 'undefined' && pageSubtitle) { %>
+        <p class="lead mb-0"><%= pageSubtitle %></p>
+      <% } %>
+    </div>
+  </section>
+
+  <div class="container py-5">

@@ -1,0 +1,64 @@
+<%-
+/* ============================================================
+   File Name   : about.ejs (About Me page view)
+   Student's Name : 徐斌航
+   StudentID   : 2024110514
+   Date        : 2026-11-03
+   Description : About Me page. Shows the legal name, a head
+                 and shoulders photo, a short professional bio
+                 and a link to the PDF version of the resume.
+   ============================================================ */
+%>
+
+<!-- Include the shared header (head + navigation bar) -->
+<%- include('partials/header') %>
+
+<!-- Shared page banner + opening of the content area -->
+<%- include('partials/content', { pageTitle: 'About Me', pageSubtitle: 'A short introduction to who I am' }) %>
+
+  <!-- ---------- About Me section ---------- -->
+  <div class="row g-5 align-items-center">
+
+    <!-- Head and shoulders photo -->
+    <div class="col-md-4 text-center">
+      <img src="/images/avatar.png" alt="Head and shoulders photo of 徐斌航"
+           class="about-photo rounded-circle shadow img-fluid">
+    </div>
+
+    <!-- Short bio -->
+    <div class="col-md-8">
+      <h2 class="fw-bold mb-1">徐斌航</h2>
+      <p class="text-primary fw-semibold mb-4">Web Development Student &middot; COMP229</p>
+
+      <p class="lead">
+        Hello! I am <strong>徐斌航</strong>, a web application development student
+        currently studying at Centennial College. I enjoy turning ideas into working
+        websites using HTML, CSS, JavaScript and modern back-end technologies such as
+        Node.js and Express.
+      </p>
+      <p>
+        My interest in programming started when I built my first personal web page and
+        realised how rewarding it is to see code become something people can actually
+        use. Since then I have been constantly learning — through coursework, personal
+        projects and small freelance jobs — with a focus on writing clean,
+        well-documented and maintainable code.
+      </p>
+      <p class="mb-4">
+        When I am not coding, I enjoy photography, playing badminton and exploring
+        new technologies. I am always open to new opportunities and collaborations,
+        so feel free to get in touch!
+      </p>
+
+      <!-- Link to the PDF version of the resume -->
+      <a href="/docs/resume.pdf" target="_blank" class="btn btn-dark btn-lg">
+        <i class="bi bi-file-earmark-pdf-fill me-2"></i>Download My Resume (PDF)
+      </a>
+    </div>
+  </div>
+
+<!-- Close the content area opened by the content partial -->
+</div>
+</main>
+
+<!-- Include the shared footer (footer + scripts) -->
+<%- include('partials/footer') %>

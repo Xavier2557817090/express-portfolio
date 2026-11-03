@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+
+# VS Code user settings (keep .vscode folder config if desired)

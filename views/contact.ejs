@@ -1,0 +1,94 @@
+<%-
+/* ============================================================
+   File Name   : contact.ejs (Contact Me page view)
+   Student's Name : 徐斌航
+   StudentID   : 2024110514
+   Date        : 2026-11-03
+   Description : Contact Me page. Shows the contact information
+                 panel and an interactive form (first name, last
+                 name, contact number, email, message) that
+                 posts to POST /contact and redirects the user
+                 back to the Home page.
+   ============================================================ */
+%>
+
+<!-- Include the shared header (head + navigation bar) -->
+<%- include('partials/header') %>
+
+<!-- Shared page banner + opening of the content area -->
+<%- include('partials/content', { pageTitle: 'Contact Me', pageSubtitle: 'I would love to hear from you' }) %>
+
+  <!-- ---------- Contact section: info panel + message form ---------- -->
+  <div class="row g-5">
+
+    <!-- Left column: reusable contact information panel -->
+    <div class="col-lg-5">
+      <%- include('partials/contact-info') %>
+    </div>
+
+    <!-- Right column: interactive contact form -->
+    <div class="col-lg-7">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+
+          <h2 class="h4 fw-bold mb-4"><i class="bi bi-send-fill me-2"></i>Send Me a Message</h2>
+
+          <!-- The form posts to POST /contact (see routes/index.js) -->
+          <form id="contact-form" action="/contact" method="POST" novalidate>
+
+            <div class="row g-3">
+              <!-- First name -->
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="firstName" name="firstName"
+                       placeholder="John" required>
+              </div>
+
+              <!-- Last name -->
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="lastName" name="lastName"
+                       placeholder="Doe" required>
+              </div>
+
+              <!-- Contact number -->
+              <div class="col-md-6">
+                <label for="contactNumber" class="form-label">Contact Number</label>
+                <input type="tel" class="form-control" id="contactNumber" name="contactNumber"
+                       placeholder="15995837303">
+              </div>
+
+              <!-- Email address -->
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" name="email"
+                       placeholder="john.doe@example.com" required>
+              </div>
+
+              <!-- Message -->
+              <div class="col-12">
+                <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="message" name="message" rows="5"
+                          placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <!-- Submit button -->
+              <div class="col-12">
+                <button type="submit" class="btn btn-warning btn-lg px-4" id="submit-btn">
+                  <i class="bi bi-send-fill me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Close the content area opened by the content partial -->
+</div>
+</main>
+
+<!-- Include the shared footer (footer + scripts) -->
+<%- include('partials/footer') %>
